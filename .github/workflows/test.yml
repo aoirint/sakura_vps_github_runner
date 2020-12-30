@@ -1,4 +1,4 @@
-name: Test with Docker
+name: Test
 on: [ push ]
 jobs:
   test:
@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: bash ./test.sh
+      - run: sudo bash ./test.sh
         env:
           ORGANIZATION_URL: ${{ secrets.ORGANIZATION_URL }}
           RUNNER_TOKEN: ${{ secrets.RUNNER_TOKEN }}
