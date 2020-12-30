@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: sudo bash ./test.sh
+      - run: sudo -E bash ./test.sh
         env:
           ORGANIZATION_URL: ${{ secrets.ORGANIZATION_URL }}
           RUNNER_TOKEN: ${{ secrets.RUNNER_TOKEN }}
