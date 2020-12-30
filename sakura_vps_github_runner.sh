@@ -22,9 +22,10 @@ chown -R temp:temp /actions-runner
 su - temp <<EOF
 ORGANIZATION_URL=@@@ORGANIZATION_URL@@@
 RUNNER_TOKEN=@@@RUNNER_TOKEN@@@
+RUNNER_LABELS=@@@RUNNER_LABELS@@@
 
 cd /actions-runner
-./config.sh --url "\${ORGANIZATION_URL}" --token "\${RUNNER_TOKEN}"
+./config.sh --url "\${ORGANIZATION_URL}" --token "\${RUNNER_TOKEN}" --labels "${RUNNER_LABELS}"
 EOF
 chown -R root:root /actions-runner
 userdel temp
