@@ -1,3 +1,5 @@
+set -eu
+
 RUNNER_VERSION=@@@RUNNER_VERSION@@@
 RUNNER_FILENAME=actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
 RUNNER_URL=https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/${RUNNER_FILENAME}

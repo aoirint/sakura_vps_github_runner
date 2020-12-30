@@ -1,0 +1,15 @@
+name: Test with Docker
+on: [ push ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: docker build . -t aoirint/sakura_vps_github_runner --build-arg ORGANIZATION_URL --build-arg RUNNER_TOKEN
+        env:
+          ORGANIZATION_URL: ${{ secrets.ORGANIZATION_URL }}
+          RUNNER_TOKEN: ${{ secrets.RUNNER_TOKEN }}
+      - name: Run
+        run: docker run --rm aoirint/sakura_vps_github_runner
