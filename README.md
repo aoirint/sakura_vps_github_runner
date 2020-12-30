@@ -26,20 +26,6 @@ jobs:
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - run: # https://github.com/actions/setup-python#using-setup-python-with-a-self-hosted-runner
-
-name: Python sample
-on: [ push ]
-jobs:
-  build:
-    runs-on: [self-hosted, linux, x64]
-    name: Python sample
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: python3 -c 'print("Hello Self-Hosted GitHub Runner!")'
 ```
 
