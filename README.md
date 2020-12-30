@@ -4,7 +4,7 @@ Ubuntu上にGitHub Self-Hosted Runnerをセットアップします。Repository
 2020/12/31 7:00時点でUbuntu 16.04、18.04、20.04で動作確認済。
 
 @aoirint
-https://gist.github.com/aoirint/20667e02f2d041111b54b7793d7f91e4
+https://github.com/aoirint/sakura_vps_github_runner
 
 https://docs.github.com/en/free-pro-team@latest/actions/hosting-your-own-runners
 
