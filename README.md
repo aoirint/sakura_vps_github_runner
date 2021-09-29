@@ -1,8 +1,16 @@
+# sakura_vps_github_runner
+
+2021-09-28 GitHub Self-Hosted RunnerをセットアップするスタートアップスクリプトがさくらのVPS公式から公開されたようなので、そちらの利用をおすすめします！
+
+- https://vps.sakura.ad.jp/news/ss-self-hosted-runner/
+
+---
+
 Ubuntu上にGitHub Self-Hosted Runnerをセットアップします。RepositoryまたはOrganizationのURL、およびSettings > Actions > Self-hosted runners > Add new > New runner > Configureから取得できるトークンが必要です（--tokenの部分）。
 
 注意：同じ名前のSelf-Hosted Runnerが既に登録されている場合、スタートアップスクリプトが途中で停止してしまいます。古いRunnerをGitHub上から削除してください。
 
-2020/12/31 7:00時点でUbuntu 16.04、18.04、20.04で動作確認済。
+2020-12-31 7:00時点でUbuntu 16.04、18.04、20.04で動作確認済。
 
 @aoirint
 
@@ -28,5 +36,3 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: python3 -c 'print("Hello Self-Hosted GitHub Runner!")'
 ```
-
-2020.12.31
